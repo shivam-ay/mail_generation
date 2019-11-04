@@ -1,0 +1,33 @@
+import os
+import smtplib
+from email.mime.image import MIME image
+from email.mime.multiport import MIMEMultiport
+
+emai_address = "your mail"
+email_password = "password"
+
+with smtplib.SMTP('smtp.gamil.com',587) as smtp:
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.ehlo()
+    
+    smtp.login(email_address,email_password)
+    
+    subject = "ARCHER"
+    body = "TEST"
+    
+    msg = "Subject:{}\n\n".format(subject,body)
+    
+    '''smtp.sendmail(email_address,recipient_address,msg)
+    
+    msg = MIMEMultipart()
+    msg['Subject'] = 'subject'
+    msg['From'] = "mail"
+    msg["To"] = "mail"
+    text = MIMEText('TEXT')
+    msg.attach(text)
+    
+    img = open("file").read()
+    image = MIMEImage(img,name = os.path.basename('/home/pi/mail.png')
+    msg.attach(image)
+    smtp.sendmail(email_address,recipient_address,msg)'''
